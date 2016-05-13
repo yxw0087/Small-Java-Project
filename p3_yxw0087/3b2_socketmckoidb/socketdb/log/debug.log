@@ -1,0 +1,1644 @@
+**** Debug log started: Fri Nov 21 10:52:24 SGT 2014 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: gnu.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.control.DBController ( lvl: 40 )
+  Database init failed
+[ TIME: Fri Nov 21 10:52:26 SGT 2014 ]
+% com.mckoi.database.DatabaseException: The database does not exist.
+	at com.mckoi.database.Database.init(Database.java:1798)
+	at com.mckoi.database.control.DBController.startDatabase(DBController.java:131)
+	at com.mckoi.runtime.McKoiDBMain.doBoot(McKoiDBMain.java:163)
+	at com.mckoi.runtime.McKoiDBMain.main(McKoiDBMain.java:296)
+**** Debug log started: Fri Nov 21 10:52:29 SGT 2014 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: gnu.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+**** Debug log started: Fri Nov 21 10:52:34 SGT 2014 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: gnu.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ SELECT Course.courseDesc FROM Enrolled, Course  WHERE 9=Enrolled.id AND Enrolled.courseId=Course.courseId ]
+
+]
+[ TIME: Fri Nov 21 10:59:00 SGT 2014 ]
+% com.mckoi.database.StatementException: Table 'APP.Enrolled' was not found.
+	at com.mckoi.database.interpret.Planner.generateFromSet(Planner.java:170)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:119)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO Enrolled (id, courseId) VALUES (9, 6) ]
+
+]
+[ TIME: Fri Nov 21 10:59:00 SGT 2014 ]
+% com.mckoi.database.DatabaseException: Table 'APP.Enrolled' does not exist.
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:127)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ DELETE FROM Enrolled WHERE Enrolled.id=9AND Enrolled.courseId=3 ]
+
+]
+[ TIME: Fri Nov 21 10:59:00 SGT 2014 ]
+% com.mckoi.database.DatabaseException: Table 'APP.Enrolled' does not exist.
+	at com.mckoi.database.interpret.Delete.prepare(Delete.java:98)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ SELECT Course.courseDesc FROM Enrolled, Course  WHERE 9=Enrolled.id AND Enrolled.courseId=Course.courseId ]
+
+]
+[ TIME: Fri Nov 21 10:59:00 SGT 2014 ]
+% com.mckoi.database.StatementException: Table 'APP.Enrolled' was not found.
+	at com.mckoi.database.interpret.Planner.generateFromSet(Planner.java:170)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:119)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ SELECT Student.name, Address.street, Address.city, Address.state, Address.zip FROM Student, Address WHERE Student.id=Address.id ]
+
+]
+[ TIME: Fri Nov 21 10:59:13 SGT 2014 ]
+% com.mckoi.database.StatementException: Table 'APP.Student' was not found.
+	at com.mckoi.database.interpret.Planner.generateFromSet(Planner.java:170)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:119)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+**** Debug log started: Fri Nov 21 11:14:57 SGT 2014 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: gnu.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+[ TIME: Fri Nov 21 11:14:57 SGT 2014 ]
+% java.io.IOException: Conglomerate already exists: DefaultDatabase
+	at com.mckoi.database.TableDataConglomerate.minimalCreate(TableDataConglomerate.java:1014)
+	at com.mckoi.database.TableDataConglomerate.create(TableDataConglomerate.java:1055)
+	at com.mckoi.database.Database.create(Database.java:1696)
+	at com.mckoi.database.control.DBController.createDatabase(DBController.java:96)
+	at com.mckoi.runtime.McKoiDBMain.doCreate(McKoiDBMain.java:114)
+	at com.mckoi.runtime.McKoiDBMain.main(McKoiDBMain.java:287)
+**** Debug log started: Fri Nov 21 11:15:02 SGT 2014 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: gnu.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: C:\Users\Jami\Desktop\Java\3b2_socketmckoidb\socketdb\.\.\data\DefaultDatabase.lock
+**** Debug log started: Fri Nov 21 11:15:06 SGT 2014 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+> com.mckoi.database.DatabaseSystem ( lvl: 40 )
+  Error starting buffer manager
+[ TIME: Fri Nov 21 11:15:07 SGT 2014 ]
+% java.io.IOException: Journal file already exists.
+	at com.mckoi.store.JournalledSystem.newTopJournalFile(JournalledSystem.java:344)
+	at com.mckoi.store.JournalledSystem.start(JournalledSystem.java:157)
+	at com.mckoi.store.LoggingBufferManager.start(LoggingBufferManager.java:174)
+	at com.mckoi.database.TransactionSystem.init(TransactionSystem.java:585)
+	at com.mckoi.database.DatabaseSystem.init(DatabaseSystem.java:98)
+	at com.mckoi.database.control.DBController.createDatabase(DBController.java:159)
+	at com.mckoi.database.control.DBController.createDatabase(DBController.java:91)
+	at com.mckoi.runtime.McKoiDBMain.doCreate(McKoiDBMain.java:114)
+	at com.mckoi.runtime.McKoiDBMain.main(McKoiDBMain.java:287)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ DROP TABLE Student ]
+
+]
+[ TIME: Fri Nov 21 11:15:15 SGT 2014 ]
+% com.mckoi.database.DatabaseException: Table 'APP.Student' does not exist.
+	at com.mckoi.database.interpret.DropTable.evaluate(DropTable.java:92)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+**** Debug log started: Fri Nov 21 11:22:20 SGT 2014 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: gnu.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: C:\Users\Jami\Desktop\Java\3b2_socketmckoidb\socketdb\.\.\data\DefaultDatabase.lock
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO Enrolled (id, courseId) VALUES (9, 6) ]
+
+]
+[ TIME: Fri Nov 21 11:22:25 SGT 2014 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_8) Columns = ( idcourseId ) Table = ( APP.Enrolled )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:262)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+% Dropped: 021APP_Student
+% Dropped: 022APP_Address
+% Dropped: 023APP_Enrolled
+% Dropped: 024APP_Course
+% Dropped: 025APP_Major
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO Enrolled (id, courseId) VALUES (9, 6) ]
+
+]
+[ TIME: Fri Nov 21 11:25:12 SGT 2014 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_13) Columns = ( idcourseId ) Table = ( APP.Enrolled )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:262)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO Enrolled (id, courseId) VALUES (9, 6) ]
+
+]
+[ TIME: Fri Nov 21 11:25:29 SGT 2014 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_13) Columns = ( idcourseId ) Table = ( APP.Enrolled )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:262)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO Enrolled (id, courseId) VALUES (9, 6) ]
+
+]
+[ TIME: Fri Nov 21 11:25:41 SGT 2014 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_13) Columns = ( idcourseId ) Table = ( APP.Enrolled )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:262)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+% Dropped: 026APP_Student
+% Dropped: 027APP_Address
+% Dropped: 028APP_Enrolled
+% Dropped: 029APP_Course
+% Dropped: 030APP_Major
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+**** Debug log started: Fri Nov 21 12:36:12 SGT 2014 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: gnu.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: C:\Users\Jami\Desktop\Java\3b2_socketmckoidb\socketdb\.\.\data\DefaultDatabase.lock
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+[ TIME: Fri Nov 21 12:58:07 SGT 2014 ]
+% com.mckoi.database.sql.ParseException: Encountered "FROM" at line 1, column 22.
+Was expecting one of:
+    "*" ...
+    "+" ...
+    "-" ...
+    <BOOLEAN_LITERAL> ...
+    "null" ...
+    "if" ...
+    "new" ...
+    "trim" ...
+    "user" ...
+    "cast" ...
+    "name" ...
+    "java" ...
+    "count" ...
+    "action" ...
+    "groups" ...
+    "option" ...
+    "account" ...
+    "password" ...
+    "language" ...
+    "privileges" ...
+    "date" ...
+    "time" ...
+    "timestamp" ...
+    "current_time" ...
+    "current_date" ...
+    "current_timestamp" ...
+    "not" ...
+    <NUMBER_LITERAL> ...
+    <STRING_LITERAL> ...
+    <QUOTED_VARIABLE> ...
+    <IDENTIFIER> ...
+    <DOT_DELIMINATED_REF> ...
+    <QUOTED_DELIMINATED_REF> ...
+    <GLOBVARIABLE> ...
+    <QUOTEDGLOBVARIABLE> ...
+    "?" ...
+    "(" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.SelectColumn(SQL.java:1868)
+	at com.mckoi.database.sql.SQL.SelectColumnList(SQL.java:1782)
+	at com.mckoi.database.sql.SQL.GetTableSelectExpression(SQL.java:1397)
+	at com.mckoi.database.sql.SQL.Select(SQL.java:315)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:162)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ SELECT Course.courseid, Course.courseDesc FROM Course ]
+
+]
+[ TIME: Fri Nov 21 13:14:09 SGT 2014 ]
+% com.mckoi.database.StatementException: Reference 'Course.courseid' not found.
+	at com.mckoi.database.interpret.TableExpressionFromSet.qualifyVariable(TableExpressionFromSet.java:470)
+	at com.mckoi.database.interpret.TableExpressionFromSet$1.prepare(TableExpressionFromSet.java:487)
+	at com.mckoi.database.Expression.prepare(Expression.java:368)
+	at com.mckoi.database.interpret.Planner$QuerySelectColumnSet.prepareSelectColumn(Planner.java:985)
+	at com.mckoi.database.interpret.Planner$QuerySelectColumnSet.prepare(Planner.java:1044)
+	at com.mckoi.database.interpret.Planner.formQueryPlan(Planner.java:303)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:123)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ SELECT Student.name FROM Student, Major WHERE Student.majorID=Major.majorId ]
+
+]
+[ TIME: Fri Nov 21 13:29:24 SGT 2014 ]
+% com.mckoi.database.StatementException: Reference 'Student.majorID' not found.
+	at com.mckoi.database.interpret.TableExpressionFromSet.qualifyVariable(TableExpressionFromSet.java:470)
+	at com.mckoi.database.interpret.TableExpressionFromSet$1.prepare(TableExpressionFromSet.java:487)
+	at com.mckoi.database.Expression.prepare(Expression.java:368)
+	at com.mckoi.database.interpret.SearchExpression.prepare(SearchExpression.java:102)
+	at com.mckoi.database.interpret.Planner.prepareSearchExpression(Planner.java:80)
+	at com.mckoi.database.interpret.Planner.formQueryPlan(Planner.java:436)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:123)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ SELECT Major.majorId, Major.majorDesc FROM Mmajor ]
+
+]
+[ TIME: Fri Nov 21 13:45:32 SGT 2014 ]
+% com.mckoi.database.StatementException: Table 'APP.Mmajor' was not found.
+	at com.mckoi.database.interpret.Planner.generateFromSet(Planner.java:170)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:119)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO Enrolled (id, courseId) VALUES (9, 6) ]
+
+]
+[ TIME: Fri Nov 21 13:56:26 SGT 2014 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_18) Columns = ( idcourseId ) Table = ( APP.Enrolled )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:262)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+**** Debug log started: Sat Nov 22 00:41:46 SGT 2014 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: gnu.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: C:\Users\Jami\Desktop\Java\3b2_socketmckoidb\socketdb\.\.\data\DefaultDatabase.lock
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+**** Debug log started: Sat Nov 22 04:31:57 SGT 2014 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: gnu.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: C:\Users\Jami\Desktop\Java\3b2_socketmckoidb\socketdb\.\.\data\DefaultDatabase.lock
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+[ TIME: Sat Nov 22 04:58:31 SGT 2014 ]
+% com.mckoi.database.sql.ParseException: Encountered "Enrolled.courseId" at line 1, column 76.
+Was expecting one of:
+    <EOF> 
+    "union" ...
+    "except" ...
+    "group by" ...
+    "order by" ...
+    "intersect" ...
+    ";" ...
+    "=" ...
+    "==" ...
+    ">" ...
+    "<" ...
+    ">=" ...
+    "<=" ...
+    <NOTEQ> ...
+    "is" ...
+    "like" ...
+    "not" ...
+    "and" ...
+    "or" ...
+    "/" ...
+    "+" ...
+    "-" ...
+    "*" ...
+    "||" ...
+    "regex" ...
+    <REGEX_LITERAL> ...
+    "in" ...
+    "between" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:224)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ SELECT Course.courseDesc FROM Coruse, Enrolled WHERE 9=Enrolled.id AND Enrolled.courseId=Course.courseId ]
+
+]
+[ TIME: Sat Nov 22 05:07:11 SGT 2014 ]
+% com.mckoi.database.StatementException: Table 'APP.Coruse' was not found.
+	at com.mckoi.database.interpret.Planner.generateFromSet(Planner.java:170)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:119)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ SELECT Course.courseDesc FROM Coruse, Enrolled WHERE 13=Enrolled.id AND Enrolled.courseId=Course.courseId ]
+
+]
+[ TIME: Sat Nov 22 05:07:35 SGT 2014 ]
+% com.mckoi.database.StatementException: Table 'APP.Coruse' was not found.
+	at com.mckoi.database.interpret.Planner.generateFromSet(Planner.java:170)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:119)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+**** Debug log started: Sat Nov 22 07:15:46 SGT 2014 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: gnu.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: C:\Users\Jami\Desktop\Java\3b2_socketmckoidb\socketdb\.\.\data\DefaultDatabase.lock
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+[ TIME: Sat Nov 22 07:47:21 SGT 2014 ]
+% com.mckoi.database.sql.ParseException: Encountered "<EOF>" at line 1, column 80.
+Was expecting one of:
+    ")" ...
+    "," ...
+    "=" ...
+    "==" ...
+    ">" ...
+    "<" ...
+    ">=" ...
+    "<=" ...
+    <NOTEQ> ...
+    "is" ...
+    "like" ...
+    "not" ...
+    "and" ...
+    "or" ...
+    "/" ...
+    "+" ...
+    "-" ...
+    "*" ...
+    "||" ...
+    "regex" ...
+    <REGEX_LITERAL> ...
+    "in" ...
+    "between" ...
+    "(" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.InsertDataList(SQL.java:1728)
+	at com.mckoi.database.sql.SQL.Insert(SQL.java:972)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:183)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+[ TIME: Sat Nov 22 07:48:39 SGT 2014 ]
+% com.mckoi.database.sql.ParseException: Encountered "<EOF>" at line 1, column 80.
+Was expecting one of:
+    ")" ...
+    "," ...
+    "=" ...
+    "==" ...
+    ">" ...
+    "<" ...
+    ">=" ...
+    "<=" ...
+    <NOTEQ> ...
+    "is" ...
+    "like" ...
+    "not" ...
+    "and" ...
+    "or" ...
+    "/" ...
+    "+" ...
+    "-" ...
+    "*" ...
+    "||" ...
+    "regex" ...
+    <REGEX_LITERAL> ...
+    "in" ...
+    "between" ...
+    "(" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.InsertDataList(SQL.java:1728)
+	at com.mckoi.database.sql.SQL.Insert(SQL.java:972)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:183)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+[ TIME: Sat Nov 22 07:51:50 SGT 2014 ]
+% com.mckoi.database.sql.ParseException: Encountered "<EOF>" at line 1, column 80.
+Was expecting one of:
+    ")" ...
+    "," ...
+    "=" ...
+    "==" ...
+    ">" ...
+    "<" ...
+    ">=" ...
+    "<=" ...
+    <NOTEQ> ...
+    "is" ...
+    "like" ...
+    "not" ...
+    "and" ...
+    "or" ...
+    "/" ...
+    "+" ...
+    "-" ...
+    "*" ...
+    "||" ...
+    "regex" ...
+    <REGEX_LITERAL> ...
+    "in" ...
+    "between" ...
+    "(" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.InsertDataList(SQL.java:1728)
+	at com.mckoi.database.sql.SQL.Insert(SQL.java:972)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:183)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+[ TIME: Sat Nov 22 07:53:00 SGT 2014 ]
+% com.mckoi.database.sql.ParseException: Encountered "<EOF>" at line 1, column 78.
+Was expecting one of:
+    ")" ...
+    "," ...
+    "=" ...
+    "==" ...
+    ">" ...
+    "<" ...
+    ">=" ...
+    "<=" ...
+    <NOTEQ> ...
+    "is" ...
+    "like" ...
+    "not" ...
+    "and" ...
+    "or" ...
+    "/" ...
+    "+" ...
+    "-" ...
+    "*" ...
+    "||" ...
+    "regex" ...
+    <REGEX_LITERAL> ...
+    "in" ...
+    "between" ...
+    "(" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.InsertDataList(SQL.java:1728)
+	at com.mckoi.database.sql.SQL.Insert(SQL.java:972)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:183)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+[ TIME: Sat Nov 22 07:54:02 SGT 2014 ]
+% com.mckoi.database.sql.ParseException: Encountered "<EOF>" at line 1, column 78.
+Was expecting one of:
+    ")" ...
+    "," ...
+    "=" ...
+    "==" ...
+    ">" ...
+    "<" ...
+    ">=" ...
+    "<=" ...
+    <NOTEQ> ...
+    "is" ...
+    "like" ...
+    "not" ...
+    "and" ...
+    "or" ...
+    "/" ...
+    "+" ...
+    "-" ...
+    "*" ...
+    "||" ...
+    "regex" ...
+    <REGEX_LITERAL> ...
+    "in" ...
+    "between" ...
+    "(" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.InsertDataList(SQL.java:1728)
+	at com.mckoi.database.sql.SQL.Insert(SQL.java:972)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:183)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+[ TIME: Sat Nov 22 07:58:08 SGT 2014 ]
+% com.mckoi.database.sql.ParseException: Encountered "lei" at line 1, column 55.
+Was expecting one of:
+    ")" ...
+    "," ...
+    "=" ...
+    "==" ...
+    ">" ...
+    "<" ...
+    ">=" ...
+    "<=" ...
+    <NOTEQ> ...
+    "is" ...
+    "like" ...
+    "not" ...
+    "and" ...
+    "or" ...
+    "/" ...
+    "+" ...
+    "-" ...
+    "*" ...
+    "||" ...
+    "regex" ...
+    <REGEX_LITERAL> ...
+    "in" ...
+    "between" ...
+    "(" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.InsertDataList(SQL.java:1728)
+	at com.mckoi.database.sql.SQL.Insert(SQL.java:972)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:183)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+[ TIME: Sat Nov 22 07:58:48 SGT 2014 ]
+% com.mckoi.database.sql.ParseException: Encountered "<EOF>" at line 1, column 56.
+Was expecting one of:
+    ")" ...
+    "," ...
+    "=" ...
+    "==" ...
+    ">" ...
+    "<" ...
+    ">=" ...
+    "<=" ...
+    <NOTEQ> ...
+    "is" ...
+    "like" ...
+    "not" ...
+    "and" ...
+    "or" ...
+    "/" ...
+    "+" ...
+    "-" ...
+    "*" ...
+    "||" ...
+    "regex" ...
+    <REGEX_LITERAL> ...
+    "in" ...
+    "between" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.InsertDataList(SQL.java:1728)
+	at com.mckoi.database.sql.SQL.Insert(SQL.java:972)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:183)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+[ TIME: Sat Nov 22 08:00:41 SGT 2014 ]
+% com.mckoi.database.sql.ParseException: Encountered "<EOF>" at line 1, column 58.
+Was expecting one of:
+    ")" ...
+    "," ...
+    "=" ...
+    "==" ...
+    ">" ...
+    "<" ...
+    ">=" ...
+    "<=" ...
+    <NOTEQ> ...
+    "is" ...
+    "like" ...
+    "not" ...
+    "and" ...
+    "or" ...
+    "/" ...
+    "+" ...
+    "-" ...
+    "*" ...
+    "||" ...
+    "regex" ...
+    <REGEX_LITERAL> ...
+    "in" ...
+    "between" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.InsertDataList(SQL.java:1728)
+	at com.mckoi.database.sql.SQL.Insert(SQL.java:972)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:183)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO Student(id, name, majorId) VALUES (1, diu, 2) ]
+
+]
+[ TIME: Sat Nov 22 08:01:38 SGT 2014 ]
+% com.mckoi.database.StatementException: Can't find column: diu
+	at com.mckoi.database.interpret.Statement.resolveColumn(Statement.java:226)
+	at com.mckoi.database.interpret.Statement.resolveVariableName(Statement.java:249)
+	at com.mckoi.database.interpret.Statement.resolveExpression(Statement.java:261)
+	at com.mckoi.database.interpret.Insert.prepare(Insert.java:192)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO Student(id, name, majorId) VALUES (1, 'diu lei', 2) ]
+
+]
+[ TIME: Sat Nov 22 08:03:01 SGT 2014 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_16) Columns = ( id ) Table = ( APP.Student )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:262)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO Course(courseId, courseDesc) VALUES (2, 'hahahha') ]
+
+]
+[ TIME: Sat Nov 22 09:23:20 SGT 2014 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_19) Columns = ( courseId ) Table = ( APP.Course )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:262)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO Enrolled (id, courseId) VALUES (9, 6) ]
+
+]
+[ TIME: Sat Nov 22 09:55:30 SGT 2014 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_18) Columns = ( idcourseId ) Table = ( APP.Enrolled )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:262)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+**** Debug log started: Sat Nov 22 09:56:23 SGT 2014 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: gnu.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: C:\Users\Jami\Desktop\Java\3b2_socketmckoidb\socketdb\.\.\data\DefaultDatabase.lock
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO Student(id, name, majorId) VALUES (1, 'y', 6) ]
+
+]
+[ TIME: Sat Nov 22 10:37:31 SGT 2014 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_16) Columns = ( id ) Table = ( APP.Student )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:262)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+% Dropped: 031APP_Student
+% Dropped: 032APP_Address
+% Dropped: 033APP_Enrolled
+% Dropped: 034APP_Course
+% Dropped: 035APP_Major
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO Course(courseId, courseDesc) VALUES (1, '11') ]
+
+]
+[ TIME: Sat Nov 22 10:46:07 SGT 2014 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_24) Columns = ( courseId ) Table = ( APP.Course )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:262)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO Major(majorId, majorDesc) VALUES (1, '11') ]
+
+]
+[ TIME: Sat Nov 22 10:46:22 SGT 2014 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_25) Columns = ( majorId ) Table = ( APP.Major )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:262)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+[ TIME: Sat Nov 22 10:53:30 SGT 2014 ]
+% com.mckoi.database.sql.ParseException: Encountered ")" at line 1, column 54.
+Was expecting one of:
+    <EOF> 
+    "union" ...
+    "except" ...
+    "group by" ...
+    "order by" ...
+    "intersect" ...
+    ";" ...
+    "=" ...
+    "==" ...
+    ">" ...
+    "<" ...
+    ">=" ...
+    "<=" ...
+    <NOTEQ> ...
+    "is" ...
+    "like" ...
+    "not" ...
+    "and" ...
+    "or" ...
+    "/" ...
+    "+" ...
+    "-" ...
+    "*" ...
+    "||" ...
+    "regex" ...
+    <REGEX_LITERAL> ...
+    "in" ...
+    "between" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:224)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ SELECT Student.studentId FROM Course WHERE Student.studentId=99 ]
+
+]
+[ TIME: Sat Nov 22 10:57:28 SGT 2014 ]
+% com.mckoi.database.StatementException: Reference 'Student.studentId' not found.
+	at com.mckoi.database.interpret.TableExpressionFromSet.qualifyVariable(TableExpressionFromSet.java:470)
+	at com.mckoi.database.interpret.TableExpressionFromSet$1.prepare(TableExpressionFromSet.java:487)
+	at com.mckoi.database.Expression.prepare(Expression.java:368)
+	at com.mckoi.database.interpret.Planner$QuerySelectColumnSet.prepareSelectColumn(Planner.java:985)
+	at com.mckoi.database.interpret.Planner$QuerySelectColumnSet.prepare(Planner.java:1044)
+	at com.mckoi.database.interpret.Planner.formQueryPlan(Planner.java:303)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:123)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ SELECT Student.id FROM Course WHERE Student.id=99 ]
+
+]
+[ TIME: Sat Nov 22 10:57:52 SGT 2014 ]
+% com.mckoi.database.StatementException: Reference 'Student.id' not found.
+	at com.mckoi.database.interpret.TableExpressionFromSet.qualifyVariable(TableExpressionFromSet.java:470)
+	at com.mckoi.database.interpret.TableExpressionFromSet$1.prepare(TableExpressionFromSet.java:487)
+	at com.mckoi.database.Expression.prepare(Expression.java:368)
+	at com.mckoi.database.interpret.Planner$QuerySelectColumnSet.prepareSelectColumn(Planner.java:985)
+	at com.mckoi.database.interpret.Planner$QuerySelectColumnSet.prepare(Planner.java:1044)
+	at com.mckoi.database.interpret.Planner.formQueryPlan(Planner.java:303)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:123)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ SELECT id FROM Course WHERE id=99 ]
+
+]
+[ TIME: Sat Nov 22 10:58:17 SGT 2014 ]
+% com.mckoi.database.StatementException: Reference 'id' not found.
+	at com.mckoi.database.interpret.TableExpressionFromSet.qualifyVariable(TableExpressionFromSet.java:470)
+	at com.mckoi.database.interpret.TableExpressionFromSet$1.prepare(TableExpressionFromSet.java:487)
+	at com.mckoi.database.Expression.prepare(Expression.java:368)
+	at com.mckoi.database.interpret.Planner$QuerySelectColumnSet.prepareSelectColumn(Planner.java:985)
+	at com.mckoi.database.interpret.Planner$QuerySelectColumnSet.prepare(Planner.java:1044)
+	at com.mckoi.database.interpret.Planner.formQueryPlan(Planner.java:303)
+	at com.mckoi.database.interpret.Select.prepare(Select.java:123)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:144)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+[ TIME: Sat Nov 22 11:01:01 SGT 2014 ]
+% com.mckoi.database.sql.ParseException: Encountered ")" at line 1, column 55.
+Was expecting one of:
+    <EOF> 
+    "union" ...
+    "except" ...
+    "group by" ...
+    "order by" ...
+    "intersect" ...
+    ";" ...
+    "=" ...
+    "==" ...
+    ">" ...
+    "<" ...
+    ">=" ...
+    "<=" ...
+    <NOTEQ> ...
+    "is" ...
+    "like" ...
+    "not" ...
+    "and" ...
+    "or" ...
+    "/" ...
+    "+" ...
+    "-" ...
+    "*" ...
+    "||" ...
+    "regex" ...
+    <REGEX_LITERAL> ...
+    "in" ...
+    "between" ...
+    
+	at com.mckoi.database.sql.SQL.generateParseException(SQL.java:6070)
+	at com.mckoi.database.sql.SQL.jj_consume_token(SQL.java:5939)
+	at com.mckoi.database.sql.SQL.Statement(SQL.java:224)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:94)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Exception thrown during query processing on: [ Query:
+[ INSERT INTO Enrolled(id, courseId) VALUES (9, 1) ]
+
+]
+[ TIME: Sat Nov 22 11:05:01 SGT 2014 ]
+% com.mckoi.database.DatabaseConstraintViolationException: Immediate primary Key constraint violation (_ANONYMOUS_CONSTRAINT_23) Columns = ( idcourseId ) Table = ( APP.Enrolled )
+	at com.mckoi.database.TableDataConglomerate.checkAddConstraintViolations(TableDataConglomerate.java:1963)
+	at com.mckoi.database.MasterTableDataSource$MMutableTableDataSource.constraintIntegrityCheck(MasterTableDataSource.java:1924)
+	at com.mckoi.database.DataTable.add(DataTable.java:180)
+	at com.mckoi.database.interpret.Insert.evaluate(Insert.java:262)
+	at com.mckoi.database.interpret.SQLQueryExecutor.execute(SQLQueryExecutor.java:147)
+	at com.mckoi.database.jdbcserver.AbstractJDBCDatabaseInterface.execQuery(AbstractJDBCDatabaseInterface.java:461)
+	at com.mckoi.database.jdbcserver.JDBCDatabaseInterface.execQuery(JDBCDatabaseInterface.java:251)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.queryCommand(JDBCProcessor.java:352)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processQuery(JDBCProcessor.java:293)
+	at com.mckoi.database.jdbcserver.JDBCProcessor.processJDBCCommand(JDBCProcessor.java:196)
+	at com.mckoi.database.jdbcserver.StreamJDBCServerConnection.processRequest(StreamJDBCServerConnection.java:137)
+	at com.mckoi.database.jdbcserver.MultiThreadedConnectionPoolServer$1.run(MultiThreadedConnectionPoolServer.java:171)
+	at com.mckoi.database.WorkerThread.run(WorkerThread.java:123)
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.
+% Dropped: 036APP_Student
+% Dropped: 037APP_Address
+% Dropped: 038APP_Enrolled
+% Dropped: 039APP_Course
+% Dropped: 040APP_Major
+**** Debug log started: Sat Nov 22 11:26:28 SGT 2014 ****
+% Storage System: v1 file storage mode.
+% Internal Data Cache size:          4194304
+% Internal Data Cache max cell size: 8192
+% lookup_comparison_list = false
+% read_only = false
+% transaction_error_on_dirty_select = true
+% ignore_case_for_identifiers = false
+% Java NIO API is available.
+% io_safety_level = 10
+% Using stardard IO API for heap buffered file access.
+% [Buffer Manager] Using IO API: Java IO
+% [Buffer Manager] Page Size: 8192
+% [Buffer Manager] Max pages: 256
+% Using regex bridge: gnu.regexp
+% No 'function_factories' config property found.
+% statement_cache = true
+% Max worker threads set to: 4
+% Starting Database Server
+> com.mckoi.database.V1FileStoreSystem ( lvl: 20 )
+  File lock file exists: C:\Users\Jami\Desktop\Java\3b2_socketmckoidb\socketdb\.\.\data\DefaultDatabase.lock
+> com.mckoi.database.jdbcserver.JDBCDatabaseInterface ( lvl: 20 )
+  Couldn't change to 'BedrockU.conf' schema.

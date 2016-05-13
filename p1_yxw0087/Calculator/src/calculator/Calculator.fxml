@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="292.0" prefWidth="217.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.CalculatorController">
+   <children>
+      <VBox layoutX="10.0" layoutY="140.0" spacing="10.0">
+         <children>
+            <HBox layoutX="22.0" layoutY="144.0" spacing="10.0">
+               <children>
+                  <Button layoutX="38.0" layoutY="57.0" mnemonicParsing="false" onAction="#seven" prefHeight="27.0" prefWidth="42.0" text="7" />
+                  <Button layoutX="48.0" layoutY="67.0" mnemonicParsing="false" onAction="#eight" prefHeight="27.0" prefWidth="42.0" text="8" />
+                  <Button layoutX="58.0" layoutY="77.0" mnemonicParsing="false" onAction="#nine" prefHeight="27.0" prefWidth="42.0" text="9" />
+                  <Button layoutX="68.0" layoutY="87.0" mnemonicParsing="false" onAction="#divide" prefHeight="27.0" prefWidth="42.0" text="/" />
+               </children>
+            </HBox>
+            <HBox layoutX="22.0" layoutY="195.0" spacing="10.0">
+               <children>
+                  <Button layoutX="38.0" layoutY="57.0" mnemonicParsing="false" onAction="#four" prefHeight="27.0" prefWidth="42.0" text="4" />
+                  <Button layoutX="48.0" layoutY="67.0" mnemonicParsing="false" onAction="#five" prefHeight="27.0" prefWidth="42.0" text="5" />
+                  <Button layoutX="58.0" layoutY="77.0" mnemonicParsing="false" onAction="#six" prefHeight="27.0" prefWidth="42.0" text="6" />
+                  <Button layoutX="68.0" layoutY="87.0" mnemonicParsing="false" onAction="#multiply" prefHeight="27.0" prefWidth="42.0" text="x" />
+               </children>
+            </HBox>
+            <HBox layoutX="22.0" layoutY="247.0" spacing="10.0">
+               <children>
+                  <Button layoutX="38.0" layoutY="57.0" mnemonicParsing="false" onAction="#one" prefHeight="27.0" prefWidth="42.0" text="1" />
+                  <Button layoutX="48.0" layoutY="67.0" mnemonicParsing="false" onAction="#two" prefHeight="27.0" prefWidth="42.0" text="2" />
+                  <Button layoutX="58.0" layoutY="77.0" mnemonicParsing="false" onAction="#three" prefHeight="27.0" prefWidth="42.0" text="3" />
+                  <Button layoutX="68.0" layoutY="87.0" mnemonicParsing="false" onAction="#minus" prefHeight="27.0" prefWidth="42.0" text="-" />
+               </children>
+            </HBox>
+            <HBox layoutX="22.0" layoutY="299.0" spacing="10.0">
+               <children>
+                  <Button layoutX="38.0" layoutY="57.0" mnemonicParsing="false" onAction="#zero" prefHeight="27.0" prefWidth="42.0" text="0" />
+                  <Button layoutX="48.0" layoutY="67.0" mnemonicParsing="false" onAction="#clear" prefHeight="27.0" prefWidth="42.0" text="Clr" />
+                  <Button layoutX="58.0" layoutY="77.0" mnemonicParsing="false" onAction="#equal" prefHeight="27.0" prefWidth="42.0" text="=" />
+                  <Button layoutX="68.0" layoutY="87.0" mnemonicParsing="false" onAction="#plus" prefHeight="27.0" prefWidth="42.0" text="+" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TextField layoutX="13.0" layoutY="44.0" prefHeight="36.0" prefWidth="191.0" />
+      <Label fx:id="label" layoutX="20.0" layoutY="48.0" prefHeight="27.0" prefWidth="179.0" textAlignment="RIGHT" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="18.0">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <MenuBar layoutX="13.0" layoutY="14.0" prefHeight="27.0" prefWidth="191.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Calculator">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="13.0" layoutY="98.0" text="Input">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="input" layoutX="68.0" layoutY="98.0" onAction="#input" prefHeight="27.0" prefWidth="138.0" />
+   </children>
+</AnchorPane>
